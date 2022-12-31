@@ -7,7 +7,6 @@ public abstract class Piece {
 	private Board board;
 
 	public Piece(Board board) {
-		super();
 		// não tem a peça criada pq a posição dela inicialmente é nula
 		this.board = board;
 		position = null;
@@ -20,7 +19,7 @@ public abstract class Piece {
 	public abstract boolean[][] possibleMoves();
 	
 	public boolean possibleMove(Position position) {
-		return possibleMoves()[position.getColumn()][position.getRow()];
+		return possibleMoves()[position.getRow()][position.getColumn()];
 	}
 	
 	public boolean isThereAnyPossibleMove() {
